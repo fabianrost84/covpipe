@@ -37,4 +37,5 @@ RUN chmod +x hash.py \
 # integrate kraken database into the container (will increase container size by ~4 GB!)
 RUN wget -q -O kraken_db.tar.gz https://zenodo.org/record/4534746/files/GRCh38.p13_SC2_2021-02-08.tar.gz?download=1 \
     && tar zxvf kraken_db.tar.gz \
-    && rm kraken_db.tar.gz
+    && rm kraken_db.tar.gz \
+    && chmod -R a+rX /GRCh38.p13_SC2_2021-02-08
